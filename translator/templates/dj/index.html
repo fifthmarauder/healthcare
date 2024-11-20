@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Translation Web App with Generative AI</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/voice.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Healthcare Translation Web App with Generative AI</h1>
+    </header>
+
+    <!-- Language Selection -->
+    <div class="language-box">
+        <img src="{% static 'img/en-us.png' %}" alt="English Flag" class="flag input-flag">
+        <select id="inputLanguage">
+            <option value="en-US">English (US)</option>
+            <option value="es-ES">Spanish (Spain)</option>
+            <option value="fr-FR">French (France)</option>
+            <option value="zh-CN">Chinese (Mandarin)</option>
+            <option value="de-DE">German (Germany)</option>
+        </select>
+    </div>
+    <div class="language-box">
+        <img src="{% static 'img/es-es.png' %}" alt="Spanish Flag" class="flag output-flag">
+        <select id="outputLanguage">
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="zh">Chinese</option>
+            <option value="en">English</option>
+            <option value="de">German</option>
+        </select>
+    </div>
+
+    <!-- Transcript and Translation -->
+    <div class="container">
+        <div class="text-box">
+            <img src="{% static 'img/en-us.png' %}" alt="English Flag" class="flag-large input-box-flag">
+            <textarea id="result" class="text-area" readonly placeholder="Original Transcript"></textarea>
+            <div class="button-container">
+                <button id="mic-btn" class="mic-btn">
+                    <img src="{% static 'img/mic.png' %}" alt="Microphone">
+                </button>
+                <p class="button-label">HOLD</p>
+            </div>
+        </div>
+
+        <div class="text-box">
+            <img src="{% static 'img/es-es.png' %}" alt="Spanish Flag" class="flag-large output-box-flag">
+            <textarea id="translation" class="text-area" readonly placeholder="Translated Text"></textarea>
+            <div class="button-container">
+                <button id="speak-btn" class="speak-btn">
+                    <img src="{% static 'img/speaker.png' %}" alt="Speaker">
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
