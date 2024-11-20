@@ -15,9 +15,5 @@
         "src": "/(.*)",
         "dest": "manage.py"
       }
-    ],
-    "env": {
-      "SECRET_KEY": "@SECRET_KEY",
-      "OPENAI_API_KEY": "@OPENAI_API_KEY"
-    }
+    ]
   }
